@@ -171,7 +171,7 @@ def main():
 
     # Prepare model-specific kwargs
     model_kwargs = {}
-    if args.model == "powsm":
+    if "powsm" in args.model:
         model_kwargs = {
             "s2t_train_config": args.s2t_train_config,
             "s2t_model_file": args.s2t_model_file,
