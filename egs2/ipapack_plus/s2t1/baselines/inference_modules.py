@@ -241,6 +241,7 @@ class PowsmInference:
             # Override default parameters if provided in input_batch
             text_prev = input_batch.get("text_prev", self.text_prev)
             lang_sym = input_batch.get("language", self.lang_sym)
+            if lang_sym[0] != "<": lang_sym = f"<{lang_sym}>"
             task_sym = input_batch.get("task_sym", self.task_sym)
 
             # Run inference
